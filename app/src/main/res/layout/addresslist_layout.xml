@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:background="@drawable/edit_back_white"
+    android:layout_height="90dp">
+    <LinearLayout
+        android:paddingLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/addresslist_text_name"
+            android:textColor="#2e2e2e"
+            android:gravity="center_vertical"
+            android:text="name"
+            android:textSize="17dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:textColor="#a1a1a1"
+            android:textSize="12dp"
+            android:id="@+id/addresslist_text_number"
+            android:text="number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <TextView
+        android:textSize="14dp"
+        android:id="@+id/addresslist_text_address"
+        android:paddingLeft="30dp"
+        android:textColor="#2e2e2e"
+        android:text="address1+address2"
+        android:lines="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

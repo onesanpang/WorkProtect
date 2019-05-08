@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a23936.shoppingmall.AddAddressActivity">
+
+    <ImageView
+        android:src="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+    <LinearLayout
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/addaddres_image_back"
+            android:src="@mipmap/back_black"
+            android:layout_width="20dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:paddingLeft="20dp"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:text="添加收货地址"
+            android:layout_width="270dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:paddingRight="15dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textColor="#f20606"
+                android:gravity="center"
+                android:text="保存"
+                android:id="@+id/addaddress_text_add"
+                android:layout_width="45dp"
+                android:layout_height="25dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:src="#f1f1f1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+
+    <EditText
+
+        android:id="@+id/addaddress_edit_name"
+        android:paddingLeft="10dp"
+        android:maxLength="20"
+        android:textSize="13dp"
+        android:hint="收货人"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <ImageView
+        android:src="#bfbfbf"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp" />
+    <EditText
+        android:inputType="number"
+        android:id="@+id/addaddress_edit_number"
+        android:paddingLeft="10dp"
+        android:maxLength="11"
+        android:textSize="13dp"
+        android:hint="手机号码"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <ImageView
+        android:src="#bfbfbf"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp" />
+    <TextView
+        android:id="@+id/addaddress_text_address1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:maxLength="11"
+        android:textSize="13dp"
+        android:hint="所在地"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <ImageView
+        android:src="#bfbfbf"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp" />
+    <EditText
+        android:id="@+id/addaddress_edit_address2"
+        android:paddingLeft="10dp"
+        android:maxLength="50"
+        android:textSize="13dp"
+        android:hint="详细地址：如门牌号、小区、楼栋号、单元室"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <ImageView
+        android:src="#bfbfbf"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp" />
+
+</LinearLayout>

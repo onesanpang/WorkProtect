@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a23936.shoppingmall.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/mian_fragment"
+        android:layout_above="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/edit_back_white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <LinearLayout
+            android:id="@+id/main_linear_homepage"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_image_homepage"
+                android:src="@mipmap/homepageone"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/main_text_homepage"
+                android:gravity="center"
+                android:text="首页"
+                android:textSize="12dp"
+                android:layout_width="35dp"
+                android:layout_height="15dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_linear_classification"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_image_classifition"
+                android:src="@mipmap/classone"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/main_text_classifition"
+                android:gravity="center"
+                android:text="分类"
+                android:textSize="12dp"
+                android:layout_width="35dp"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_linear_shoppingcart"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/main_image_shoppingcart"
+                android:src="@mipmap/shoppingone"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/main_text_shoppingcart"
+                android:gravity="center"
+                android:text="购物车"
+                android:textSize="12dp"
+                android:layout_width="40dp"
+                android:layout_height="15dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_linear_own"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_image_own"
+                android:src="@mipmap/ownone"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/main_text_own"
+                android:gravity="center"
+                android:text="我的"
+                android:textSize="12dp"
+                android:layout_width="35dp"
+                android:layout_height="15dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

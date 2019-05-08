@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.a23936.shoppingmall.FirstActivity">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/first_image_goods"
+        android:layout_above="@id/first_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/first_line"
+        android:src="#CCCCCC"
+        android:layout_above="@id/first_linear"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <LinearLayout
+        android:background="#ffffff"
+        android:id="@+id/first_linear"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+        <ImageView
+            android:src="@mipmap/iconm"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_width="150dp"
+            android:layout_height="45dp">
+            <TextView
+                android:paddingLeft="20dp"
+                android:textSize="25dp"
+                android:gravity="bottom"
+                android:text="大米商城"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                />
+            <TextView
+                android:gravity="center"
+                android:textSize="9dp"
+                android:text="让每个人都能享受到网购的乐趣"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#f7f7f7"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <View
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_weight="13"
+            android:layout_width="0dp"
+            android:layout_height="30dp">
+            <EditText
+                android:id="@+id/classifition_edit_find"
+                android:drawableLeft="@mipmap/find"
+                android:background="@drawable/edit_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/news"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="90dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/classifition_text_new"
+                android:textColor="#393939"
+                android:gravity="center"
+                android:text="新品"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/classifition_text_phone"
+                android:textColor="#393939"
+                android:gravity="center"
+                android:text="手机"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/classifition_text_tv"
+                android:textColor="#393939"
+                android:gravity="center"
+                android:text="电视"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/classifition_text_computer"
+                android:textColor="#393939"
+                android:gravity="center"
+                android:text="电脑"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+       <ImageView
+           android:src="#afafaf"
+           android:layout_width="0.2dp"
+           android:layout_height="match_parent" />
+
+       <FrameLayout
+           android:id="@+id/classifition_fragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

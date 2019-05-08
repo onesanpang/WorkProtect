@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="#ffffff"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/news"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="13"
+            android:layout_width="0dp"
+            android:layout_height="30dp">
+            <EditText
+                android:id="@+id/homepage_edit_find"
+                android:drawableLeft="@mipmap/find"
+                android:background="@drawable/edit_back_white"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/twoweima"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/homepage_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                </com.youth.banner.Banner>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp">
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:background="@drawable/edit_back_white"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/homepage_image_select1"
+                            android:scaleType="fitXY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:src="#f7f7f7"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="@drawable/edit_back_white"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/homepage_image_select2"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <ImageView
+                            android:src="#f7f7f7"
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp" />
+                        <ImageView
+                            android:id="@+id/homepage_image_select3"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:padding="15dp"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:text="每日精选"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/homepage_image_select4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+            <!--android:nestedScrollingEnabled="false"解决了RecyclerView滑动过慢的原因-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/homepage_recyclerview"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

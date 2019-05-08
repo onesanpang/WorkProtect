@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="320dp">
+
+    <LinearLayout
+        android:layout_above="@+id/popupWindow_button"
+        android:background="#ebebeb"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:padding="20dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="版本"
+                android:textColor="#303030"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:id="@+id/popupWindow_linear_one"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/linear_back_lan"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="6GB+64GB"
+                    android:textColor="#303030" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="20dp"
+                    android:text="1999元"
+                    android:textColor="#303030"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/popupwindow_linear_two"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/linear_back_lan"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="6GB+128GB"
+                    android:textColor="#303030" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="20dp"
+                    android:text="2999元"
+                    android:textColor="#303030"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="颜色"
+                android:textColor="#303030"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/popupwindow_text_color1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/linear_back_lan"
+                    android:gravity="center"
+                    android:text="深空灰"
+                    android:textColor="#303030"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/popupwindow_text_color2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/linear_back_lan"
+                    android:gravity="center"
+                    android:text="全息幻彩紫"
+                    android:textColor="#303030"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/popupwindow_text_color3"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/linear_back_lan"
+                    android:gravity="center"
+                    android:text="全息幻彩蓝"
+                    android:textColor="#303030"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/popupWindow_button"
+        android:layout_alignParentBottom="true"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:text="加入购物车"
+        android:background="@drawable/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</RelativeLayout>

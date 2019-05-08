@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:background="#0da0f2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <LinearLayout
+        android:background="#0da0f2"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@mipmap/icon"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#ffffff"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:textColor="#CCCCCC"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="13772189320"
+            android:layout_width="200dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+    <ImageView
+        android:src="#f1f1f1"
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@drawable/linear_selector"
+                android:id="@+id/own_linear_order"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:src="@mipmap/dingdan"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="19dp"
+                    android:textColor="#000000"
+                    android:text="我的订单"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/jiantou" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:src="#CCCCCC"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp" />
+
+            <LinearLayout
+                android:background="@drawable/linear_selector"
+                android:id="@+id/own_linear_address"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:src="@mipmap/address"
+                    android:layout_width="35dp"
+                    android:layout_height="27dp" />
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="19dp"
+                    android:textColor="#000000"
+                    android:text="我的收货地址"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/jiantou" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:src="#CCCCCC"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp" />
+
+            <LinearLayout
+                android:background="@drawable/linear_selector"
+                android:id="@+id/own_linear_shoucnag"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:src="@mipmap/shoucang"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="19dp"
+                    android:textColor="#000000"
+                    android:text="我的收藏"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/jiantou" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:src="#CCCCCC"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp" />
+
+            <LinearLayout
+                android:background="@drawable/linear_selector"
+                android:id="@+id/own_linear_about"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:src="@mipmap/about"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="19dp"
+                    android:textColor="#000000"
+                    android:text="关于"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/jiantou" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:src="#f4f4f4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:background="@drawable/linear_selector"
+                android:id="@+id/own_linear_setting"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:src="@mipmap/settting"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:textSize="19dp"
+                    android:textColor="#000000"
+                    android:text="设置"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+                    <ImageView
+
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/jiantou" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:src="#CCCCCC"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp" />
+
+        </LinearLayout>
+</LinearLayout>
