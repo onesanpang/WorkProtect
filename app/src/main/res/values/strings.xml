@@ -2,4 +2,5 @@
     <string name="app_name">大米商城</string>
     <drawable name="clr_normal">#ffffff</drawable>
     <drawable name="clr_pressed">#eaeaea</drawable>
+
 </resources>

@@ -59,7 +59,7 @@ public class PhoneAdapterC extends RecyclerView.Adapter<PhoneAdapterC.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Phone phone = mphoneList.get(position);
-        holder.phoneImage.setImageBitmap(phone.getImageView());
+        //holder.phoneImage.setImageBitmap(phone.getImageView());
         holder.phone_name.setText(phone.getText_name());
         holder.phone_text.setText(phone.getText());
         holder.phone_price.setText(phone.getText_price());

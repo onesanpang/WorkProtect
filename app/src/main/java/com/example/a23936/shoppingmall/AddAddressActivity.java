@@ -1,12 +1,15 @@
 package com.example.a23936.shoppingmall;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -68,7 +71,6 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
         //创建一个数据库，并且打开；
         //通过下面这个方法，创建，如果存在就打开，不存在就创建并打开
         db = openOrCreateDatabase("data.db",MODE_PRIVATE,null);
-        db.execSQL("create table if not exists address(_id integer primary key autoincrement,name text not null,number text not null,address1 text not null,address2 text not null)");
 
     }
 
@@ -80,10 +82,10 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.addaddress_text_add:
                 insertData();
-                startActivity(new Intent(this,AddresActivity.class));
-                finish();
                 break;
             case R.id.addaddress_text_address1:
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(edit_number.getWindowToken(),0);
                 cityPicker.show();
                 break;
             default:
@@ -117,6 +119,8 @@ public class AddAddressActivity extends AppCompatActivity implements View.OnClic
             String sql = "insert into address(name,number,address1,address2) values('"+name+"','"+number+"','"+address1+"','"+address2+"')";
             Toast.makeText(this, "保存成功", Toast.LENGTH_SHORT).show();
             db.execSQL(sql);
+            startActivity(new Intent(this,AddresActivity.class));
+            finish();
         }
 
     }

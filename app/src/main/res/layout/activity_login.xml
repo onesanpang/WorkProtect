@@ -8,7 +8,13 @@
     android:background="#ffffff"
     android:padding="30dp"
     tools:context="com.example.a23936.shoppingmall.LoginActivity">
-
+    <TextView
+        android:id="@+id/login_text_regriester"
+        android:text="注册"
+        android:gravity="end"
+        android:textColor="#0da0f2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
     <LinearLayout
         android:id="@+id/login_linear_number"
         android:gravity="bottom"
@@ -32,8 +38,8 @@
         <EditText
             android:textSize="15dp"
             android:maxLength="11"
-            android:inputType="number"
-            android:hint="请输入手机号"
+            android:inputType="textVisiblePassword"
+            android:hint="请输入用户名/手机号"
             android:id="@+id/login_edit_number"
             android:background="@null"
             android:paddingLeft="10dp"
@@ -43,32 +49,48 @@
             android:src="#0da0f2"
             android:layout_width="match_parent"
             android:layout_height="0.5dp" />
-        <LinearLayout
-            android:gravity="bottom"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <EditText
-                android:hint="请输入验证码"
-                android:textSize="15dp"
-                android:inputType="textVisiblePassword"
-                android:background="@null"
-                android:paddingLeft="10dp"
-                android:id="@+id/login_edit_code"
-                android:layout_width="230dp"
-                android:layout_height="40dp" />
-            <Button
-                android:id="@+id/login_but_getCode"
-                android:text="获取验证码"
-                android:background="@null"
-                android:layout_width="match_parent"
 
-                android:layout_height="40dp" />
-        </LinearLayout>
+        <EditText
+            android:layout_marginTop="25dp"
+            android:textSize="15dp"
+            android:maxLength="11"
+            android:inputType="textPassword"
+            android:hint="请输入密码"
+            android:id="@+id/login_edit_password"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
         <ImageView
             android:src="#0da0f2"
             android:layout_width="match_parent"
             android:layout_height="0.5dp" />
+        <!--<LinearLayout-->
+            <!--android:gravity="bottom"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp">-->
+            <!--<EditText-->
+                <!--android:hint="请输入验证码"-->
+                <!--android:textSize="15dp"-->
+                <!--android:inputType="textVisiblePassword"-->
+                <!--android:background="@null"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:id="@+id/login_edit_code"-->
+                <!--android:layout_width="230dp"-->
+                <!--android:layout_height="40dp" />-->
+            <!--<Button-->
+                <!--android:id="@+id/login_but_getCode"-->
+                <!--android:text="获取验证码"-->
+                <!--android:background="@null"-->
+                <!--android:layout_width="match_parent"-->
+
+                <!--android:layout_height="40dp" />-->
+        <!--</LinearLayout>-->
+        <!--<ImageView-->
+            <!--android:src="#0da0f2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp" />-->
         <Button
             android:id="@+id/login_but_login"
             android:textSize="19dp"

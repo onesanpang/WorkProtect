@@ -1,14 +1,27 @@
 package com.example.a23936.shoppingmall;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by 23936 on 2019/4/19.
@@ -16,8 +29,9 @@ import java.util.List;
 
 public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder>{
     private List<Phone> mPhoneList;
+    private Context mContext;
 
-
+    private OnItemClickListener mOnItemClickListener = null;
 
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView phone_image;
@@ -33,7 +47,8 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder>{
             phone_price = itemView.findViewById(R.id.homepage_recyclerview_textprice);
         }
     }
-    public PhoneAdapter(List<Phone> phoneList){
+    public PhoneAdapter(Context mContext,List<Phone> phoneList){
+        this.mContext = mContext;
         mPhoneList = phoneList;
     }
 
@@ -47,6 +62,14 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder>{
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.homerecycler_layout,parent,false);
         ViewHolder holder = new ViewHolder(view);
+        if (mOnItemClickListener != null){
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.onItemClick(v);
+                }
+            });
+        }
         return holder;
     }
 
@@ -58,10 +81,11 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Phone phone = mPhoneList.get(position);
-        holder.phone_image.setImageBitmap(phone.getImageView());
+        Glide.with(mContext).load(phone.getImageView()).into(holder.phone_image);
         holder.phone_name.setText(phone.getText_name());
         holder.phone_text.setText(phone.getText());
         holder.phone_price.setText(phone.getText_price());
+        holder.itemView.setTag(position);
     }
 
     //就是返回RecyclerView有多少个子项
@@ -69,4 +93,14 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder>{
     public int getItemCount() {
         return mPhoneList.size();
     }
+
+    public interface OnItemClickListener{
+        void onItemClick(View view);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.mOnItemClickListener = listener;
+    }
+
+
 }

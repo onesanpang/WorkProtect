@@ -74,8 +74,8 @@ public class CollectionActivity extends AppCompatActivity implements View.OnClic
 
         recyclerView.setAdapter(adapterC);
 
-        Phone phone = new Phone(bitmaps,data[0],data[1],data[2]);
-        phoneList.add(phone);
+        //Phone phone = new Phone(bitmaps,data[0],data[1],data[2]);
+        //phoneList.add(phone);
         adapterC.notifyItemInserted(phoneList.size());
         adapterC.notifyItemChanged(phoneList.size());
 

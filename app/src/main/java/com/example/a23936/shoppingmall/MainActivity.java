@@ -1,6 +1,7 @@
 package com.example.a23936.shoppingmall;
 
 
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout classLinear;
     private LinearLayout shoppingLinear;
     private LinearLayout ownLinear;
+
+    private SQLiteDatabase db;
 
 
     private static Handler mhandler = new Handler(){
@@ -97,7 +100,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         classLinear.setOnClickListener(this);
         shoppingLinear.setOnClickListener(this);
         ownLinear.setOnClickListener(this);
+
+
     }
+
+
 
     // 初始化所有fragment
     public void initFragment(){
@@ -110,10 +117,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!classFragment.isAdded()){
             fragmentTransaction.add(R.id.mian_fragment,classFragment);
             fragmentTransaction.hide(classFragment);
-        }
-        if (!shoppingFragment.isAdded()){
-            fragmentTransaction.add(R.id.mian_fragment,shoppingFragment);
-            fragmentTransaction.hide(shoppingFragment);
         }
         if (!ownFragment.isAdded()){
             fragmentTransaction.add(R.id.mian_fragment,ownFragment);
@@ -130,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void hideAllFragment(FragmentTransaction fragmentTransaction){
         fragmentTransaction.hide(homeFragment);
         fragmentTransaction.hide(classFragment);
-        fragmentTransaction.hide(shoppingFragment);
+        fragmentTransaction.remove(shoppingFragment);
         fragmentTransaction.hide(ownFragment);
     }
 
@@ -144,7 +147,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 clickTab(classFragment);
                 break;
             case R.id.main_linear_shoppingcart:
-                clickTab(shoppingFragment);
+                clearSelect();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.add(R.id.mian_fragment,shoppingFragment);
+                fragmentTransaction.commit();
+                shoppingImage.setImageResource(R.mipmap.shoppingtwo);
+                shoppingText.setTextColor(Color.parseColor("#0da0f2"));
                 break;
             case R.id.main_linear_own:
                 clickTab(ownFragment);
@@ -179,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             classImage.setImageResource(R.mipmap.classone);
             classText.setTextColor(Color.parseColor("#bfbfbf"));
         }
-        if (!shoppingFragment.isHidden()){
+        if (!shoppingFragment.isRemoving()){
             shoppingImage.setImageResource(R.mipmap.shoppingone);
             shoppingText.setTextColor(Color.parseColor("#bfbfbf"));
         }
@@ -199,10 +207,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (tabFragment instanceof Classification){
             classImage.setImageResource(R.mipmap.classtwo);
             classText.setTextColor(Color.parseColor("#0da0f2"));
-        }
-        if (tabFragment instanceof ShoppingCart){
-            shoppingImage.setImageResource(R.mipmap.shoppingtwo);
-            shoppingText.setTextColor(Color.parseColor("#0da0f2"));
         }
         if (tabFragment instanceof Own){
             ownImage.setImageResource(R.mipmap.onwtwo);

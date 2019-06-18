@@ -14,6 +14,9 @@ public class Commodity {
         this.imageView = imageView;
         this.name = name;
     }
+    public Commodity(String name){
+        this.name = name;
+    }
 
     public Bitmap getImageView() {
         return imageView;

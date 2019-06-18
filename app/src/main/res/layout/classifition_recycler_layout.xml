@@ -3,18 +3,24 @@
     android:layout_width="100dp"
     android:orientation="vertical"
     android:padding="10dp"
-    android:layout_height="120dp">
-    <ImageView
-        android:id="@+id/classifitionrecycler_image_logo"
-        android:layout_weight="3.5"
+    android:layout_height="130dp">
+    <LinearLayout
+        android:background="#ffffff"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
-    <TextView
-        android:id="@+id/classifitionrecycler_text_name"
-        android:textSize="10dp"
-        android:gravity="center"
-        android:text="小米9"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/classifitionrecycler_image_logo"
+            android:layout_weight="3.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/classifitionrecycler_text_name"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:text="小米9"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
 </LinearLayout>

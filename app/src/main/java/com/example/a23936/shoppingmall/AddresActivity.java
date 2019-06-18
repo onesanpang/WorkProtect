@@ -4,6 +4,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +33,7 @@ public class AddresActivity extends AppCompatActivity implements View.OnClickLis
     private ListView listView;
     private SQLiteDatabase db;
     private List<Map<String,String>> list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +68,8 @@ public class AddresActivity extends AppCompatActivity implements View.OnClickLis
         db = openOrCreateDatabase("data.db",MODE_PRIVATE,null);
         list = new ArrayList<Map<String,String>>();
 
-        adapter = new SimpleAdapter(this,getData(),R.layout.addresslist_layout,new String[]{"name","number","address"},new int[]{R.id.addresslist_text_name,R.id.addresslist_text_number,R.id.addresslist_text_address});
+        adapter = new SimpleAdapter(this,getData(),R.layout.addresslist_layout,new String[]{"name","number","address"},
+                new int[]{R.id.addresslist_text_name,R.id.addresslist_text_number,R.id.addresslist_text_address});
         listView.setAdapter(adapter);
 
     }
@@ -154,6 +159,7 @@ public class AddresActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(new Intent(AddresActivity.this,AddresActivity.class));
                 finish();
                 dialog.dismiss();
+
             }
         });
         builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -165,6 +171,7 @@ public class AddresActivity extends AppCompatActivity implements View.OnClickLis
         builder.show();
 
     }
+
 
     protected void onStop(){
         super.onStop();
